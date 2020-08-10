@@ -3,18 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>DC Quiz App</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+
+
   <body>
-    <div class="header">
+    <header class="header">
       <h1>DC Quiz</h1>
-      <h3>5 questions about the DC Universe</h3>
-    </div>
-    <div class="question-container">
-      <button onClick="location.href='question.html'" type="button" class="button-begin">Begin</button>
-    </div>
-    
+      <div class="score"></div>
+    </header>
+
+    <main>
+      <fieldset>
+        <div class="Q">
+          <legend>DC Universe</legend>
+          <p>How well do you know the DC Universe?</p>
+        </div>
+
+        <div>
+          <button type="button" id="button-begin">Begin</button>
+        </div>
+      </fieldset>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

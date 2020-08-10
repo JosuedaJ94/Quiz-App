@@ -1,3 +1,43 @@
+h1 {
+  color: rgba(0, 0, 0, 0.74);
+  text-decoration: underline;
+  font-family: Arial;
+}
+
 body {
   text-align: center;
+  background-color: turquoise;
+}
+
+ul {
+  list-style-type: none;
+  text-align: right;
+}
+
+
+main {
+  background-color: cyan;
+  border: 20px;
+  border-width: 10px;
+  border-color: black;
+  padding: 10px;
+}
+
+.question {
+  text-decoration: bold;
+  font-family: Helvetica;
+}
+
+.options {
+  text-align: left;
+  padding: 20px;
+}
+
+.Q {
+  font-size: 20pt;
+}
+
+.score li {
+  display: inline;
+  padding: 20 px;
 }
