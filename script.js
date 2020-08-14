@@ -38,6 +38,7 @@ function begin() {
   });
 }
 
+//render question
 function createQuestion() {
   let questions = STORE.questions[STORE.current];
   updateHeader();
@@ -75,6 +76,7 @@ function updateHeader() {
   $(".score").html(html);
 }
 
+//update answer choices
 function updateOptions() {
   let question = STORE.questions[STORE.current];
   for(let i = 0; i < question.options.length; i++){
@@ -85,6 +87,7 @@ function updateOptions() {
   }
 }
 
+//display results
 function display() {
   let result = $(`<div class="results">
     <form id="js-restart-quiz">
@@ -105,12 +108,14 @@ function display() {
   $("main").html(result);
 }
 
+//proceed to next question
 function questionHandler() {
   $('body').on('click', '#next', (event) => {
     STORE.current === STORE.questions.length ? display() : createQuestion();
   });
 }
 
+//check the answer submitted
 function handleAnswer() {
   $('body').on("submit", '#js-questions', function(event) {
     event.preventDefault();
@@ -144,19 +149,19 @@ function handleAnswer() {
   });
 }
 
+//restart the quiz
 function restart(){
   $('body').on('click', '#restart', (event) => {
     createQuestion();
   });
 }
 
+//run all functions
 function handler() {
   begin();  
   questionHandler();
   handleAnswer();
   restart();
 }
-
-
 
 $(handler);
